@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ポートフォリオサイト
 
-## Getting Started
+Next.js、TypeScript、Tailwind CSSを使用して作成されたポートフォリオサイトです。
 
-First, run the development server:
+## 技術スタック
+
+- **フレームワーク**: Next.js 14 (App Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **デプロイ**: Vercel
+- **その他**: ESLint, PostCSS
+
+## 機能
+
+- 🏠 **ホームページ**: 自己紹介と技術スタックの表示
+- 👤 **自己紹介ページ**: 詳細なプロフィール情報
+- 💼 **プロジェクトページ**: 開発したプロジェクトの一覧
+- 📧 **お問い合わせページ**: 連絡フォームと連絡先情報
+
+## 開発環境のセットアップ
+
+### 前提条件
+
+- Node.js 18.0.0以上
+- npm または yarn
+
+### インストール
 
 ```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 利用可能なスクリプト
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 開発サーバーの起動
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# プロダクションビルド
+npm run build
 
-## Learn More
+# プロダクションサーバーの起動
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+# リントの実行
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## デプロイ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+このプロジェクトはVercelに最適化されています。
 
-## Deploy on Vercel
+### Vercelへのデプロイ手順
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. [Vercel](https://vercel.com)にアカウントを作成
+2. GitHubリポジトリをVercelに接続
+3. 自動デプロイが設定されます
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 手動デプロイ
+
+```bash
+# Vercel CLIのインストール
+npm i -g vercel
+
+# デプロイ
+vercel
+```
+
+## プロジェクト構造
+
+```
+src/
+├── app/
+│   ├── about/
+│   │   └── page.tsx          # 自己紹介ページ
+│   ├── projects/
+│   │   └── page.tsx          # プロジェクトページ
+│   ├── contact/
+│   │   └── page.tsx          # お問い合わせページ
+│   ├── globals.css           # グローバルスタイル
+│   ├── layout.tsx            # ルートレイアウト
+│   └── page.tsx              # ホームページ
+├── components/               # 再利用可能なコンポーネント
+└── lib/                      # ユーティリティ関数
+```
+
+## カスタマイズ
+
+### 個人情報の更新
+
+各ページの内容を自分の情報に更新してください：
+
+- `src/app/page.tsx`: ホームページの自己紹介
+- `src/app/about/page.tsx`: 詳細なプロフィール
+- `src/app/projects/page.tsx`: プロジェクト情報
+- `src/app/contact/page.tsx`: 連絡先情報
+
+### スタイルのカスタマイズ
+
+Tailwind CSSを使用してスタイルをカスタマイズできます：
+
+- `src/app/globals.css`: グローバルスタイル
+- 各コンポーネント内のclassName: コンポーネント固有のスタイル
+
+## ライセンス
+
+MIT License
+
+## お問い合わせ
+
+ご質問やご提案がございましたら、お気軽にお問い合わせください。
