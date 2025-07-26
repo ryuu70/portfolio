@@ -148,21 +148,21 @@ export default function Contact() {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 container mx-auto px-6 py-8">
-        <nav className="flex justify-between items-center backdrop-blur-md bg-white/10 rounded-2xl p-4 border border-white/20">
-          <Link href="/" className="text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <header className="relative z-10 container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <nav className="flex flex-col sm:flex-row justify-between items-center backdrop-blur-md bg-white/10 rounded-2xl p-4 border border-white/20 space-y-4 sm:space-y-0">
+          <Link href="/" className="text-xl sm:text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
             ポートフォリオ
           </Link>
-          <div className="flex space-x-6">
-            <Link href="/" className="text-white/80 hover:text-white transition-colors relative group">
+          <div className="flex flex-wrap justify-center space-x-4 sm:space-x-6">
+            <Link href="/" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/about" className="text-white/80 hover:text-white transition-colors relative group">
+            <Link href="/about" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               About Me
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/projects" className="text-white/80 hover:text-white transition-colors relative group">
+            <Link href="/projects" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               プロジェクト
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
@@ -171,49 +171,49 @@ export default function Contact() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-6 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               お問い合わせ
             </span>
           </h1>
-          <p className="text-xl text-white/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             プロジェクトのご相談や技術的な質問など、お気軽にお問い合わせください。
-            <br />
+            <br className="hidden sm:block" />
             迅速にご返信いたします。
           </p>
         </div>
         
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
-            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl">
-              <h2 className="text-3xl font-bold text-white mb-8">
+            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   連絡先情報
                 </span>
               </h2>
               
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
 
                 <div className="flex items-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">📍</span>
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4 sm:mr-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-xl sm:text-2xl">📍</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-lg mb-1">所在地</h3>
-                    <p className="text-white/70">東京都大田区</p>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1">所在地</h3>
+                    <p className="text-white/70 text-sm sm:text-base">東京都大田区</p>
                   </div>
                 </div>
 
                 <div className="flex items-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">⏰</span>
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4 sm:mr-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-xl sm:text-2xl">⏰</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-lg mb-1">営業時間</h3>
-                    <p className="text-white/70">平日 9:00 - 18:00</p>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1">営業時間</h3>
+                    <p className="text-white/70 text-sm sm:text-base">平日 9:00 - 18:00</p>
                   </div>
                 </div>
               </div>

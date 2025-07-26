@@ -103,30 +103,32 @@ export default function Home() {
             </div>
 
             {/* タイトル */}
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
                 初野流斗
               </span>
             </h1>
             
             {/* サブタイトル */}
-            <div className="text-2xl md:text-3xl text-white/80 mb-8 font-light">
-              <span className="inline-block animate-fade-in-up">フルスタック</span>
-              <span className="inline-block mx-4 text-purple-400 animate-pulse">•</span>
-              <span className="inline-block animate-fade-in-up delay-200">開発者</span>
-              <span className="inline-block mx-4 text-purple-400 animate-pulse">•</span>
-              <span className="inline-block animate-fade-in-up delay-400">フォトグラファー</span>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/80 mb-8 font-light">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <span className="inline-block animate-fade-in-up">フルスタック</span>
+                <span className="hidden sm:inline text-purple-400 animate-pulse">•</span>
+                <span className="inline-block animate-fade-in-up delay-200">開発者</span>
+                <span className="hidden sm:inline text-purple-400 animate-pulse">•</span>
+                <span className="inline-block animate-fade-in-up delay-400">フォトグラファー</span>
+              </div>
             </div>
 
             {/* 説明文 */}
-            <p className="text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-              現在は主にNext.js、React、TypeScriptを使用した<br />Webアプリケーション開発を行っています。
+            <p className="text-base sm:text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+              現在は主にNext.js、React、TypeScriptを使用した<br className="hidden sm:block" />Webアプリケーション開発を行っています。
               <br />
               <br />
-              ユーザー体験を重視した、美しく機能的な<br />Webサイト、Webアプリケーションを作成します。
+              ユーザー体験を重視した、美しく機能的な<br className="hidden sm:block" />Webサイト、Webアプリケーションを作成します。
               <br />
               <br />
-              PythonやGASを使用した業務効率化ツールの開発や、<br />データ分析なども行っています。
+              PythonやGASを使用した業務効率化ツールの開発や、<br className="hidden sm:block" />データ分析なども行っています。
               <br />
               <br />
               Google広告の運用
@@ -152,15 +154,15 @@ export default function Home() {
         </div>
 
         {/* About Me Section */}
-        <section id="about" className="mt-32">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+        <section id="about" className="mt-16 sm:mt-24 md:mt-32">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8 sm:mb-12 md:mb-16 px-4">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
-          <div className="max-w-6xl mx-auto">
-            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 sm:p-8 md:p-12 border border-white/20 shadow-2xl">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6">
                     初野流斗
@@ -229,13 +231,13 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section className="mt-32">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+        <section className="mt-16 sm:mt-24 md:mt-32">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8 sm:mb-12 md:mb-16 px-4">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               技術スタック
             </span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto px-4">
             {[
               { name: "Next.js", icon: "⚡", color: "from-purple-500 to-purple-600" },
               { name: "React", icon: "⚛️", color: "from-blue-500 to-blue-600" },
@@ -252,13 +254,13 @@ export default function Home() {
             ].map((skill, index) => (
               <div 
                 key={skill.name} 
-                className="group backdrop-blur-md bg-white/10 p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                className="group backdrop-blur-md bg-white/10 p-4 sm:p-6 md:p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r ${skill.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <span className="text-2xl">{skill.icon}</span>
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-xl bg-gradient-to-r ${skill.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <span className="text-lg sm:text-xl md:text-2xl">{skill.icon}</span>
                 </div>
-                <h3 className="font-semibold text-white text-center group-hover:text-purple-300 transition-colors duration-300">
+                <h3 className="font-semibold text-white text-center text-sm sm:text-base group-hover:text-purple-300 transition-colors duration-300">
                   {skill.name}
                 </h3>
               </div>

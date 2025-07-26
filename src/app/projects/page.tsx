@@ -127,21 +127,21 @@ export default function Projects() {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 container mx-auto px-6 py-8">
-        <nav className="flex justify-between items-center backdrop-blur-md bg-white/10 rounded-2xl p-4 border border-white/20">
-          <Link href="/" className="text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <header className="relative z-10 container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <nav className="flex flex-col sm:flex-row justify-between items-center backdrop-blur-md bg-white/10 rounded-2xl p-4 border border-white/20 space-y-4 sm:space-y-0">
+          <Link href="/" className="text-xl sm:text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
             ポートフォリオ
           </Link>
-          <div className="flex space-x-6">
-            <Link href="/" className="text-white/80 hover:text-white transition-colors relative group">
+          <div className="flex flex-wrap justify-center space-x-4 sm:space-x-6">
+            <Link href="/" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/about" className="text-white/80 hover:text-white transition-colors relative group">
+            <Link href="/about" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               About Me
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/contact" className="text-white/80 hover:text-white transition-colors relative group">
+            <Link href="/contact" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               お問い合わせ
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
@@ -150,56 +150,56 @@ export default function Projects() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-6 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               プロジェクト
             </span>
           </h1>
           
-          <p className="text-xl text-white/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             これまでに開発したプロジェクトの一部をご紹介します。
-            <br />
+            <br className="hidden sm:block" />
             各プロジェクトの詳細や技術スタックについても記載しています。
           </p>
         </div>
 
         {/* Featured Projects */}
-        <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+        <section className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-12 px-4">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               注目プロジェクト
             </span>
           </h2>
-          <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-7xl mx-auto px-4">
             {projects.filter(p => p.featured).map((project, index) => (
               <div 
                 key={project.id} 
                 className="group backdrop-blur-md bg-white/10 rounded-3xl border border-white/20 overflow-hidden hover:border-white/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className={`h-48 bg-gradient-to-r ${project.color} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="text-6xl mb-4 animate-bounce">{project.image}</div>
+                <div className={`h-32 sm:h-40 md:h-48 bg-gradient-to-r ${project.color} flex items-center justify-center relative overflow-hidden`}>
+                  <div className="text-4xl sm:text-5xl md:text-6xl mb-4 animate-bounce">{project.image}</div>
                   <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-medium">
+                  <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                    <span className="px-2 sm:px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs sm:text-sm font-medium">
                       Featured
                     </span>
                   </div>
                 </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+                <div className="p-4 sm:p-6 md:p-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-purple-300 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-white/80 mb-6 leading-relaxed">
+                  <p className="text-white/80 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-white/10 backdrop-blur-md text-white/90 text-sm rounded-full border border-white/20"
+                        className="px-2 sm:px-3 py-1 bg-white/10 backdrop-blur-md text-white/90 text-xs sm:text-sm rounded-full border border-white/20"
                       >
                         {tech}
                       </span>

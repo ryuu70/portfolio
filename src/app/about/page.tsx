@@ -47,21 +47,21 @@ export default function About() {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 container mx-auto px-6 py-8">
-        <nav className="flex justify-between items-center backdrop-blur-md bg-white/10 rounded-2xl p-4 border border-white/20">
-          <Link href="/" className="text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <header className="relative z-10 container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <nav className="flex flex-col sm:flex-row justify-between items-center backdrop-blur-md bg-white/10 rounded-2xl p-4 border border-white/20 space-y-4 sm:space-y-0">
+          <Link href="/" className="text-xl sm:text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
             ポートフォリオ
           </Link>
-          <div className="flex space-x-6">
-            <Link href="/" className="text-white/80 hover:text-white transition-colors relative group">
+          <div className="flex flex-wrap justify-center space-x-4 sm:space-x-6">
+            <Link href="/" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/projects" className="text-white/80 hover:text-white transition-colors relative group">
+            <Link href="/projects" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               プロジェクト
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/contact" className="text-white/80 hover:text-white transition-colors relative group">
+            <Link href="/contact" className="text-white/80 hover:text-white transition-colors relative group text-sm sm:text-base">
               お問い合わせ
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
@@ -70,9 +70,9 @@ export default function About() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-6 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               About Me
             </span>
@@ -81,11 +81,11 @@ export default function About() {
         
         <div className="max-w-6xl mx-auto">
           {/* Profile Section */}
-          <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl mb-12">
-            <div className="grid lg:grid-cols-3 gap-12 items-center">
+          <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 sm:p-8 md:p-12 border border-white/20 shadow-2xl mb-8 sm:mb-12">
+            <div className="grid lg:grid-cols-3 gap-8 md:gap-12 items-center">
               {/* Profile Image */}
               <div className="text-center lg:text-left">
-                <div className="w-48 h-48 mx-auto lg:mx-0 mb-6 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 flex items-center justify-center relative overflow-hidden shadow-2xl animate-pulse">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto lg:mx-0 mb-6 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 flex items-center justify-center relative overflow-hidden shadow-2xl animate-pulse">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
                   
                   {/* 装飾的なドット */}
@@ -96,8 +96,8 @@ export default function About() {
                   
                   {/* メインアイコン */}
                   <div className="relative z-10 text-center">
-                    <div className="text-6xl mb-2">👨‍💻</div>
-                    <div className="text-sm text-white/80 font-mono tracking-wider">DEVELOPER</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl mb-2">👨‍💻</div>
+                    <div className="text-xs sm:text-sm text-white/80 font-mono tracking-wider">DEVELOPER</div>
                   </div>
                   
                   {/* 装飾的な枠線 */}
@@ -107,19 +107,19 @@ export default function About() {
 
               {/* Profile Info */}
               <div className="lg:col-span-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                   初野流斗
                 </h2>
-                <p className="text-white/80 leading-relaxed mb-6 text-lg">
+                <p className="text-white/80 leading-relaxed mb-4 sm:mb-6 text-base sm:text-lg">
                   現在はフルスタック開発者として、モダンなWeb技術を使用したアプリケーション開発に従事しています。
                   Next.js、React、TypeScriptを中心としたフロントエンド開発と、
                   Node.js、PostgreSQLを使用したバックエンド開発の両方に精通しています。
                 </p>
-                <p className="text-white/80 leading-relaxed mb-8 text-lg">
+                <p className="text-white/80 leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg">
                   ユーザー体験を重視し、パフォーマンスとセキュリティを考慮した
                   高品質なアプリケーションの開発を心がけています。
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                   <Link 
                     href="/projects"
                     className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
